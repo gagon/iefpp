@@ -40,7 +40,7 @@ docker exec -it cassandradb bash
 cqlsh
 create keyspace cass_temperature_ks with replication = {'class':'SimpleStrategy','replication_factor':1};
 use cass_temperature_ks;
-create table cass_temperature (myid int primary key, datetime text, temperature double, equipment_id int);
+create table kafka_temp01 (timestamp double primary key, values text);
 
 
 # go to Control Center
